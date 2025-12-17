@@ -1,68 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-    content="TrajectoireK, site sur l'effet Matilda et Katherine Johnson">
-    <title>TrajectoireK - L'effet Matilda et Katherine Johnson</title>
-    <link rel="stylesheet" type="text/css" href="/src/css/style.css">
-    <script type="module" src="/src/js/script.js"></script>
-</head>
-<body class="page__accueil">
-    <header>
-        <a class="header__link" href="/">
-            <img class="header__logo"
-            src="/assets/icon/icon_logo.svg"
-            alt="Logo TrajectoireK" />
-        </a>
-        <button
-            class="header__menu-button"
-            aria-label="menu"
-            aria-expanded="false"
-            aria-controls="mainNav">
-            <span class="menu-button__bar menu-button__bar--top" aria-hidden="true"></span>
-            <span class="menu-button__bar menu-button__bar--bottom" aria-hidden="true"></span>
-            <span class="menu-button__bar menu-button__bar--light" aria-hidden="true"></span>    
-        </button>
-        <nav class="header__menu menu" id="mainNav" hidden></nav>
-            <ul class="menu__list">
-                    <li class="menu__item">
-                        <a class="menu__link" href="/">Accueil</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="biographie.html">BIOGRAPHIE DE KATHERINE JOHNSON</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="femmes_sciences.html">FEMMES DE SCIENCES</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="travaux.html">SES TRAVAUX</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="livre.html">"HIDDEN FIGURES"</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="film.html">"LES FIGURES DE L'OMBRE"</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="contact.html">NOUS CONTACTER</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="a_propos.html">A PROPOS</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="glossaire.html">GLOSSAIRE</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="autres_projets.html">AUTRES PROJETS</a>
-                    </li>
-                </ul>
-        </nav>
-        <a class="header__link" href="/en/accueil.html">
-            <img class="header__En"
-            src="/assets/icon/icon_En.svg"
-            alt="icon_En" />
-        </a>
-    </header>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+        content="TrajectoireK, site sur l'effet Matilda et Katherine Johnson">
+        <title>TrajectoireK - L'effet Matilda et Katherine Johnson</title>
+        <link rel="stylesheet" type="text/css" href="/src/css/style.css">
+        <script type="module" src="/src/js/script.js"></script>
+    </head>
+    <body class="page__accueil">
+        <header>
+            <a class="header__link" href="/">
+                <img class="header__logo"
+                src="/assets/icon/icon_logo.svg"
+                alt="Logo TrajectoireK" />
+            </a>
+            <button
+                class="header__menu-button"
+                aria-label="menu"
+                aria-expanded="false"
+                aria-controls="mainNav">
+                <span class="menu-button__bar menu-button__bar--top" aria-hidden="true"></span>
+                <span class="menu-button__bar menu-button__bar--bottom" aria-hidden="true"></span>
+                <span class="menu-button__bar menu-button__bar--light" aria-hidden="true"></span>    
+            </button>
+            <nav class="header__menu menu" id="mainNav" hidden>
+                <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="/">Accueil</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="biographie.html">BIOGRAPHIE DE KATHERINE JOHNSON</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="femmes_sciences.html">FEMMES DE SCIENCES</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="travaux.html">SES TRAVAUX</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="livre.html">"HIDDEN FIGURES"</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="film.html">"LES FIGURES DE L'OMBRE"</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="contact.html">NOUS CONTACTER</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="a_propos.html">A PROPOS</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="glossaire.html">GLOSSAIRE</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="autres_projets.html">AUTRES PROJETS</a>
+                        </li>
+                    </ul>
+            </nav>
+            <a class="header__link" href="/en/accueil.html">
+                <img class="header__En"
+                src="/assets/icon/icon_En.svg"
+                alt="icon_En" />
+            </a>
+        </header>
+        <main>
+            <section class="hero">
+                <a class="hero__link">
+                    <img class="hero__image"
+                    src="/assets/img/photo_home_page_1.avif"
+                    alt="Katherine Johnson travaillant" />
+                </a>
+            </section>
+            <section class="introduction">
+                <a class="introduction__link">
+                    <img class="introduction__link-icon"
+                    src="/assets/icon/icon_0.svg"
+                    alt="icon haut parleur" />
+                </a>
+                <p class="introduction__text">
+                    Katherine Johnson était une mathématicienne afro-américaine brillante de la NASA, dont les calculs précis ont permis le succès des premières missions spatiales américaines et ont ouvert la voie aux femmes dans les sciences.
+                </p>
+                <button class="introduction__button" aria-label="biographie">
+                    <a class="introduction__button-link" href="biographie.html">BIOGRAPHIE</a>
+                </button>
+            </section>
+            <section class="carrousel__1">
+                <a class="carrousel__1-link">
+                    <img class="carrousel__1-image"
+                    src="/assets/img/photo_home_page_2.avif"
+                    alt="image effet Matilda" />
+                </a>
+                <p class="carrousel__1-text">
+                    Les femmes de sciences dans la littérature
+                </p>
+                <a class="carrousel__1-link">
+                    <img class="carrousel__1-image"
+                    src="/assets/img/photo_home_page_3.avif"
+                    alt="photo de Katherine Johnson qui travaille" />
+                </a>
+                <p class="carrousel__1-text">
+                    Les travaux de Katherine Johnson
+                </p>
+                <a class="carrousel__1-link">
+                    <img class="carrousel__1-image"
+                    src="/assets/img/photo_home_page_4.avif"
+                    alt="image du livre hidden figures" />
+                </a>
+                <p class="carrousel__1-text">
+                    "Hidden Figures" le roman
+                </p>
+                <p class="carrousel__1-text">
+                    Objet de la BU
+                </p>
+                <a class="carrousel__1-link">
+                    <img class="carrousel__1-image"
+                    src="/assets/img/photo_home_page_5.avif"
+                    alt="image du film les figures de l'ombre" />
+                </a>
+                <p class="carrousel__1-text">
+                    "Les Figures de l'ombre" le film
+                </p>
+            </section>
+        </main>
+        <footer class="footer">
+            <nav class="footer__nav">
+                <a href="a-propos.html">
+                    À propos
+                </a>
+                <a href="glossaire.html">
+                    Glossaire
+                </a>
+                <a href="contact.html">
+                    Contact
+                </a>
+                <a href="autres-projets.html">
+                    Autres projets
+                </a>
+            </nav>
+            <p class="footer__text">
+                Thiriet Izya MMI1 C2
+            </p>
+            <nav class="footer__nav-2">
+                <a href="mailto:izya.thiriet@edu.univ-fcomte.fr"></a>
+            </nav>
+            <p class="footer__text-2">
+                Mentions légales
+            </p>
+            <p class="footer__text-3">
+            projet réalisé en 2025 dans le cadre d’un exercice pédagogique au département MMi de Montbéliard
+            </p>
+            <a class="header__link" href="/">
+                <img class="header__logo"
+                src="/assets/icon/icon_logo.svg"
+                alt="Logo TrajectoireK" />
+            </a>
+        </footer>
+    </body>
+</html>
