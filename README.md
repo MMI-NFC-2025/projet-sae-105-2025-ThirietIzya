@@ -3,8 +3,9 @@
 
 À compléter :
 
-- NOM :
-- PRÉNOM :
-- GROUPE :
+- NOM :Thiriet
+- PRÉNOM :Izya
+- GROUPE :C2
 - URL du site :
-- URL FIGMA :
+- URL FIGMA :https://www.figma.com/design/xEAl2gbBwUGPc7sWNYmWhX/Thiriet_Izya-maquette-TrajectoireK?node-id=253-785&t=PnVyagd45YAdejpw-1
+
