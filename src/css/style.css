@@ -1,0 +1,36 @@
+/* Collection */
+:root {
+  /* Mode 1 */
+}
+/* color */
+:root {
+  /* Mode 1 */
+  /* color */
+  --color: #041532;
+  --color-2: #0d111a;
+  --color-3: #d9d9d9;
+  --color-4: #052151;
+  --color-5: #b68d49;
+  --color-6: #ffffff;
+  --color-7: #333842;
+  --color-8: #1c4893;
+  --color-9: #4179d8;
+}
+/* typographie */
+:root {
+  /* Mode 1 */
+  /* string */
+  --sous-titre-1: Calibri;
+  --titre-1: Calisto MT;
+  --titre-2: Lilita One;
+}
+/* number */
+:root {
+  /* Mode 1 */
+  /* number */
+  --taille-de-typo-4: 0.875rem;
+  --taille-de-typo-3: 1rem;
+  --marge-largeur: 1.125rem;
+  --taille-de-typo-2: 1.25rem;
+  --taille-de-typo-1: 1.5rem;
+}
