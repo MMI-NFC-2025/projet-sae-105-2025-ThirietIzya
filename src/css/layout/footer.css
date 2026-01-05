@@ -1,0 +1,68 @@
+.footer {
+    background-color: var(--color-9);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; 
+    position: relative;
+    font-family: sans-serif;
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.footer__nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+    font-family: var(--titre-2);
+    margin: 0;
+}
+
+.footer__nav-2 a {
+    color: #4179d8;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    margin: 0.2rem 0;
+}
+
+.footer__text-2 {
+    font-weight: bold;
+    font-size: var(--taille-typo-footer-2);
+    font-family: var(--titre-1);
+    margin: 0;
+}
+
+.footer__text-3 {
+    font-size: var(--taille-typo-footer-3);
+    font-family: var(--titre-1);
+    max-width: 65%; 
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Positionnement du logo en bas à droite */
+.footer .header__link {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.footer .header__logo {
+    height: 1.2rem; /* Taille du logo réduite */
+    width: auto;
+}
