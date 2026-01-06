@@ -120,7 +120,7 @@ main {
     width: 120px;
     height: 120px;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 0 !important;
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
     display: flex;
     align-items: center;
@@ -280,7 +280,6 @@ article img, .content img {
     margin-right: 18px;
     width: calc(100% - 36px);
     height: auto;
-    border-radius: 19px;
 }
 
 /* 2. On s'assure que les images du menu (header) restent normales */
@@ -294,8 +293,6 @@ header img, .menu img, nav img {
     width: 100%;           /* Prend toute la largeur disponible */
     text-align: right;     /* Colle le texte à droite */
     margin: 0 0 28px 0;    /* Marge 0 en haut (collé à l'image) et 28px en bas (espace après) */
-    
-    /* Ton style de texte */
     color: #FFF;
     font-family: Calibri;
     font-size: var(--taille-sous-titre1, 14px);

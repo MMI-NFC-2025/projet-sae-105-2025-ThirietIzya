@@ -4,7 +4,6 @@ picture {
     height: auto; 
     max-width: 100%;
     width: 357px;
-    border-radius: 19px;
 }
 
 figure {
@@ -37,7 +36,7 @@ figure {
     margin: 0 0 5px 0 !important; 
     padding: 0;
     gap: 0;
-    border-radius: 19px;
+    border-radius: 0 !important;
     overflow: hidden;
 }
 
@@ -55,11 +54,29 @@ video {
     height: auto; 
     max-width: 100%;
     width: 357px;
-    border-radius: 19px;
-}
+    border-radius: 0 !important;
+} 
 
 .valeur__video {
     width: 357px;
     height: auto;
     display: block;
+}
+
+/* Reset: remove all border-radius from media elements and image containers */
+img, picture, video,
+.hero__image,
+.carrousel__1-image,
+.carrousel__item-image,
+.carrousel__item-thumbnail,
+.body__image,
+.body__image-double,
+.body__image-compasants,
+.body__image-texte,
+.body__image-calculs,
+.body__image-lutte,
+.body__image-travail,
+.body__image-katherine {
+    border-radius: 0 !important;
+    overflow: visible !important;
 }
