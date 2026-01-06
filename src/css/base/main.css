@@ -399,3 +399,29 @@ header img, .menu img, nav img {
     font-weight: 400;
     line-height: normal;
 }
+
+.body__boutton {
+    display: inline-block;       /* Permet de donner une taille au lien */
+    background-color: #3A4253;   /* Couleur dorée de tes titres */
+    color: #FFFFFF;              /* Texte en blanc */
+    
+    text-decoration: none;       /* Enlève le soulignement du lien */
+    font-family: "Calibri", sans-serif;
+    font-weight: 700;            /* Texte en gras */
+    font-size: 16px;
+    
+    padding: 12px 24px;          /* Espace à l'intérieur du bouton */
+    border-radius: 12px;         /* Coins arrondis */
+    border: none;                /* Pas de bordure */
+    
+    cursor: pointer;             /* Curseur main au survol */
+    transition: transform 0.2s, background-color 0.2s; /* Animation douce */
+    margin-top: 15px;            /* Petit espace au-dessus si besoin */
+    margin-bottom: 28px;         /* Espace en dessous du bouton */
+}
+
+/* Effet quand on passe la souris dessus */
+.body__boutton:hover {
+    background-color: #3A4253;   /* Devient un peu plus clair */
+    transform: translateY(-2px); /* Remonte légèrement pour un effet 3D */
+}
