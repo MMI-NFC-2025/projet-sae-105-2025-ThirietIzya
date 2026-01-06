@@ -10,6 +10,15 @@
     padding: 0;
 }
 
+h1 {
+    text-align: center;
+    font-family: "Calisto MT";
+    font-size: var(--taille-titre1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 body {
     background-color: var(--color-2);
     color: var(--color-3);
@@ -187,13 +196,13 @@ main {
     .carrousel__item { flex: 0 0 calc(25% - 18px); }
 }
 
-h1 {
-text-align: center;
-font-family: "Calisto MT";
-font-size: var(--taille-titre1);
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.titre1 {
+    color: var(--Color-5, #B68D49);
+    font-family: "Calisto MT";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .hero__legende {
@@ -420,8 +429,152 @@ header img, .menu img, nav img {
     margin-bottom: 28px;         /* Espace en dessous du bouton */
 }
 
+.page__accueil .social-wrapper {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0 22px;
+}
+
+.page__accueil .contact-item {
+    text-align: center;
+}
+
+.page__accueil .contact-item .phone-link {
+    color: var(--color-6);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.page__accueil .icon-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--color-6);
+    color: var(--color-6);
+    font-size: 22px;
+    background: transparent;
+    border-radius: 6px;
+}
+
+.page__accueil .contact-item p {
+    color: var(--color-6);
+    font-family: Calibri, sans-serif;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.page__accueil .body2 {
+    color: var(--Color-3, #D9D9D9);
+    font-family: Calibri, sans-serif;
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    text-align: left;
+}
+
+/* Formulaire */
+.page__accueil .contact-form {
+    max-width: 640px;
+    margin: 18px auto 36px;
+    width: calc(100% - 36px);
+}
+
+.page__accueil .contact-form label {
+    display: block;
+    color: var(--color-6);
+    font-family: Calibri, sans-serif;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.page__accueil .contact-form input[type="text"],
+.page__accueil .contact-form input[type="email"],
+.page__accueil .contact-form textarea {
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Calibri, sans-serif;
+    margin-bottom: 14px;
+}
+
+/* Première ligne: deux champs côte à côte (nom / prénom) */
+.page__accueil .contact-form label:nth-of-type(1),
+.page__accueil .contact-form label:nth-of-type(2) {
+    display: inline-block;
+    width: calc(50% - 8px);
+}
+.page__accueil .contact-form input#name,
+.page__accueil .contact-form input#prenom {
+    display: inline-block;
+    width: calc(50% - 8px);
+    margin-right: 16px;
+}
+.page__accueil .contact-form input#prenom { margin-right: 0; }
+
+.page__accueil .contact-form textarea { min-height: 140px; resize: vertical; }
+
+.page__accueil .contact-form button[type="submit"] {
+    display: block;
+    margin: 18px auto 0;
+    background: #ffffff;
+    color: var(--color-2);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Responsive: empiler tout sur écrans étroits */
+@media (max-width: 700px) {
+    .page__accueil .contact-form input#name,
+    .page__accueil .contact-form input#prenom,
+    .page__accueil .contact-form label:nth-of-type(1),
+    .page__accueil .contact-form label:nth-of-type(2) {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .page__accueil .icon-square {
+        width: 56px;
+        height: 56px;
+    }
+
+    .page__accueil main > .titre1 { font-size: 1.25rem; }
+}
+
 /* Effet quand on passe la souris dessus */
 .body__boutton:hover {
     background-color: #3A4253;   /* Devient un peu plus clair */
     transform: translateY(-2px); /* Remonte légèrement pour un effet 3D */
+}
+
+.body2 {
+    color: #FFF;
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.titre1 {
+    color: var(--Color-5, #B68D49);
+    font-family: "Calisto MT";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
