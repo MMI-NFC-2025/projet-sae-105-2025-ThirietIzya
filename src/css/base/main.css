@@ -16,12 +16,10 @@ body {
     font-family: var(--titre-2);
     line-height: 1.6;
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
 }
 
 main {
-    flex: 1;
     padding: 0 18px; /* Marges fixes de 18px à gauche et à droite */
     max-width: 1200px;
     margin: 0 auto;
@@ -45,13 +43,13 @@ main {
 }
 
 .introduction__text {
-    flex: 1; /* Le texte prend tout l'espace restant */
+    flex: 1;
     color: var(--Color-3, #D9D9D9);
     font-family: Calibri;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    display: flex;
+    flex-direction: column;
 }
 
 .introduction__bouton {
@@ -187,4 +185,59 @@ main {
 }
 @media (min-width: 1100px) {
     .carrousel__item { flex: 0 0 calc(25% - 18px); }
+}
+
+.titre1 {
+text-align: center;
+font-family: "Calisto MT";
+font-size: var(--taille-titre1);
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.hero__legende {
+    color: #FFF;
+    text-align: right;
+    font-family: Calibri;
+    font-size: var(--taille-sous-titre1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 230px;
+    height: 34px;
+    margin-left:120px ;
+}
+
+.titre2 {
+    color: #FFF;
+    font-family: "Lilita One";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sous__titre1-1 {
+    color: var(--Color-3, #D9D9D9);
+    font-family: Calibri;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.sous__titre1-2 {
+    color: var(--Color-3, #D9D9D9);
+    font-family: Calibri;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.introduction {
+    .meta-article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 }

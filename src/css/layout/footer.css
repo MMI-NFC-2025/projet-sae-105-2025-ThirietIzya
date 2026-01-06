@@ -1,105 +1,41 @@
-/* Footer full-width with centered inner container */
-.footer {
+/* --- 1. LE CONTENEUR GLOBAL (La ligne du bas) --- */
+.footer__bottom {
+    display: flex;
+    /* Aligne le bas du texte avec le bas du logo */
+    align-items: flex-end; 
+    /* Pousse le texte à gauche et le logo tout à droite */
+    justify-content: space-between; 
     width: 100%;
-    background-color: var(--color);
-    border-top: 1px solid rgba(255,255,255,0.06);
-    color: var(--color-3);
-    padding: 18px 0; /* reduced vertical padding */
 }
 
-.footer__inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 18px;
-    box-sizing: border-box;
-}
-
-.footer__nav {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    margin-bottom: 12px;
-}
-
-.footer__nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-}
-
-.footer__main {
-    display: flex;
-    gap: 16px;
-    align-items: center; /* vertically center text and logo */
-    justify-content: space-between;
-}
-
-.footer__left {
-    flex: 1 1 auto;
-    max-width: calc(100% - 160px - 24px); /* leave room for the logo area */
-}
-
-.footer__right {
-    width: 160px;
-    display: flex;
-    align-items: center; /* vertically center the logo with the text */
-    justify-content: flex-end;
-}
-
-.footer__text {
-    margin: 0 0 6px 0;
-    font-size: 0.92rem;
-    color: var(--color-3);
-}
-
-.footer__nav-2 {
-    margin: 6px 0;
-}
-
-.footer__nav-2 a {
-    color: #4179d8;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 700;
-    display: block;
-}
-
-.footer__text-2 {
-    margin-top: 8px;
-    font-size: 0.85rem;
-    color: #ffffff;
-    font-weight: 700;
-}
-
+/* --- 2. LE TEXTE (Correction majeure ici) --- */
 .footer__text-3 {
     font-size: var(--taille-typo-footer-3);
     font-family: var(--titre-1);
     margin: 0;
-    line-height: 1.2;
-    flex: 1; /* Permet au texte de prendre la place restante */
+    line-height: 1.4; /* Un peu plus d'air pour la lisibilité */
+    
+    /* ON SUPPRIME display: flex ICI ! */
+    display: block; 
+    
+    /* On lui donne de la place pour s'étaler (comme sur l'image 2) */
+    max-width: 70%; 
 }
 
-.footer__bottom {
-    display: flex;
-    align-items: flex-end; /* Aligne le logo avec le bas du texte */
-    justify-content: space-between;
-    gap: 1rem;
-    width: 100%;
+/* --- 3. LE LOGO (Nettoyage) --- */
+.footer__logo-img {
+    height: 1.5rem;
+    width: auto;
+    border-radius: 0 !important;
+    display: block; /* Mieux que flex ici */
+    
+    /* ON SUPPRIME LE MARGIN-LEFT: 150px */
+    /* C'était ça qui écrasait ton texte ! */
+    margin-left: 0; 
 }
 
 .footer__logo-link {
-    display: flex;
-    align-items: center;
-}
-
-.footer__logo-img {
-    height: 1.5rem; /* Vous pouvez ajuster la taille ici */
-    width: auto;
-    border-radius: 0 !important;
-    
+    /* Le lien autour de l'image ne doit pas gêner */
+    display: block;
+    text-decoration: none;
 }

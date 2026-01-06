@@ -28,10 +28,10 @@
 :root {
   --taille-typo-footer-3: 0.625rem;
   --taille-typo-footer-1: 0.8125rem;
-  --taille-de-typo-4: 0.875rem;
-  --taille-de-typo-3: 1rem;
+  --taille-sous-titre1: 0.875rem;
+  --taille-body1: 0.75rem;
   --marge-largeur: 1.125rem;
-  --taille-de-typo-2: 1.25rem;
-  --taille-typo-footer-2: 1.25rem;
-  --taille-de-typo-1: 1.5rem;
+  --taille-titre2: 1rem;
+  --taille-typo-footer-2: 1rem;
+  --taille-titre1: 1.25rem;
 }
