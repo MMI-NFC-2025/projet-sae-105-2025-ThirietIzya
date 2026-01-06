@@ -197,14 +197,6 @@ main {
     .carrousel__item { flex: 0 0 calc(25% - 18px); }
 }
 
-.titre1 {
-    color: var(--Color-5, #B68D49);
-    font-family: "Calisto MT";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 
 .hero__legende {
     color: #FFF;
@@ -605,15 +597,6 @@ header img, .menu img, nav img {
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
-}
-
-.titre1 {
-    color: var(--Color-5, #B68D49);
-    font-family: "Calisto MT";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
     line-height: normal;
 }
 
