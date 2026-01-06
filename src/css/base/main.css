@@ -670,3 +670,66 @@ header img, .menu img, nav img {
     margin: 0;
     text-align: left;
 }
+
+.hero__films-image {
+    margin-bottom: 28px;
+    margin-top: 28px;
+}
+
+/* Le conteneur qui gère l'espacement global */
+.navigation-bas {
+    display: flex;
+    flex-direction: column; /* Force l'affichage vertical (l'un sous l'autre) */
+    gap: 30px;              /* Espace entre le petit lien et le gros titre */
+    margin-top: 40px;       /* Marge au-dessus du bloc */
+    margin-bottom: 40px;
+}
+
+/* Le premier lien (Bleu avec flèche) */
+.lien-details {
+    color: #4179D8;                 /* Bleu roi */
+    font-family: "Calisto MT", serif; 
+    font-size: 18px;
+    text-decoration: underline;     /* Souligné */
+    text-underline-offset: 4px;     /* Écarte un peu le soulignement */
+}
+
+/* Le deuxième lien (Doré, style titre) */
+.lien-retour {
+    color: #B68D49;                 /* Doré */
+    font-family: "Calisto MT", serif;
+    font-size: 28px;                /* Beaucoup plus grand */
+    text-decoration: none;          /* Pas de soulignement */
+    text-transform: none;           /* Respecte la casse (Majuscules/Minuscules) */
+    display: block;                 /* S'assure qu'il prend sa place */
+    transition: color 0.3s;
+}
+
+/* Petit bonus : effet au survol sur le lien doré */
+.lien-retour:hover {
+    color: #dcb36b; /* S'éclaircit un peu au survol */
+}
+
+.lien-details {
+    color: var(--Color-9, #4179D8);
+    font-family: "Calisto MT";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.lien-retour {
+    color: var(--Color-5, #B68D49);
+    font-family: "Calisto MT";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
