@@ -615,3 +615,58 @@ header img, .menu img, nav img {
     font-weight: 400;
     line-height: normal;
 }
+
+/* 1. Le conteneur principal (la Grille) */
+.body__galerie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 30px;                 /* J'ai un peu augmenté l'écart horizontal */
+    margin-bottom: 40px;
+    justify-items: center;          /* <--- NOUVEAU : Centre les blocs dans leur colonne */
+}
+
+/* (Le bloc du titre ne change pas) */
+.body__galerie .titre1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #B68D49;
+    font-family: "Calisto MT", serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* 3. Les blocs "Image + Texte" */
+.body__galerie-images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    /* <--- NOUVEAU : C'est ICI qu'on réduit la taille. */
+    /* Modifie cette valeur (ex: 250px, 300px) pour ajuster la taille désirée */
+    max-width: 280px; 
+    width: 100%; /* Prend toute la largeur jusqu'au max défini au-dessus */
+}
+
+/* 4. Les Images (ne changent pas, elles s'adaptent au conteneur au-dessus) */
+.body__galerie-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* (Le style du texte ne change pas) */
+.body__sous-titre2 {
+    color: #FFFFFF;
+    font-family: Calibri, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    text-align: left;
+}
