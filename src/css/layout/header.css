@@ -17,6 +17,11 @@ header {
 .header__logo {
     height: 1.4rem;
     width: auto;
+    border-radius: 0 !important;
+}
+
+.header__En {
+    border-radius: 0 !important;
 }
 
 .header__menu-button {
