@@ -77,3 +77,114 @@ main {
 .introduction__bouton:hover {
     background-color: var(--color-5); /* Change de couleur au survol */
 }
+
+/* ---------- Carrousel ---------- */
+.carrousel__1 {
+    position: relative;
+    margin: 40px 0;
+}
+
+.carrousel__track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 18px 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Masquer la barre de défilement pour la plupart des navigateurs */
+.carrousel__track::-webkit-scrollbar { display: none; }
+.carrousel__track { -ms-overflow-style: none; scrollbar-width: none; }
+
+.carrousel__item {
+    scroll-snap-align: start;
+    flex: 0 0 70%;
+    min-width: 260px;
+    background: var(--color); /* fond sombre */
+    border-radius: 18px;
+    padding: 18px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+    transition: transform .22s ease, box-shadow .22s ease;
+    text-decoration: none;
+}
+
+.carrousel__item:focus,
+.carrousel__item:hover {
+    transform: translateY(-6px);
+}
+
+.carrousel__item-thumbnail {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrousel__item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carrousel__item-content {
+    color: var(--color-5); /* couleur dorée des textes */
+    font-weight: 700;
+    font-family: var(--titre-2);
+}
+
+.carrousel__item-title {
+    color: #B68D49;
+    font-family: var(--sous-titre-1);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.carrousel__item-subtitle {
+    color: #FFF;
+    font-family: "Calisto MT";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.carrousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(4, 21, 50, 0.72);
+    border-radius: 50%;
+    border: none;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carrousel__btn svg { display: block; }
+.carrousel__btn--prev { left: -6px; }
+.carrousel__btn--next { right: -6px; }
+
+.carrousel__item:focus { outline: 3px solid rgba(182,141,73,0.18); outline-offset: 2px; }
+
+@media (min-width: 700px) {
+    .carrousel__item { flex: 0 0 calc(50% - 12px); min-width: 320px; }
+}
+@media (min-width: 1100px) {
+    .carrousel__item { flex: 0 0 calc(25% - 18px); }
+}
