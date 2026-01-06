@@ -11,6 +11,7 @@
 }
 
 h1 {
+    color: var(--Color-9, #4179D8);
     text-align: center;
     font-family: "Calisto MT";
     font-size: var(--taille-titre1);
@@ -732,4 +733,25 @@ header img, .menu img, nav img {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.body2-propos {
+    color: var(--Color-3, #D9D9D9);
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 28px;
+}
+
+.body2-propos_2 {
+    color: var(--Color-3, #D9D9D9);
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 28px;
+    margin-top: 28px;
 }
