@@ -263,8 +263,36 @@ h4 {
     line-height: normal;
 }
 
-/* 1. On ne touche qu'aux textes et images qui sont DANS l'article */
-/* (On suppose que votre contenu est dans une balise <article> ou <main>) */
+.body__texte {
+    margin-bottom: 28px;
+    display: block;
+    color: var(--Color-3, #D9D9D9);
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.body__citation {
+    color: #B68D49;
+    font-family: "Lilita One";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.body__legende {
+    color: #FFF;
+    text-align: right;
+    font-family: Calibri;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
 
 article p, article h1, article h2, .content p {
     margin-bottom: 28px;
@@ -330,4 +358,44 @@ header img, .menu img, nav img {
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+}
+
+/* 1. Le conteneur global */
+.fiche-roman {
+    margin: 28px 0; /* Espace vertical pour séparer du reste */
+    width: 100%;
+}
+
+/* 2. Le titre "Fiche du roman" (Doré et au-dessus du bloc) */
+.body__legende-fiche {
+    color: #B68D49;               /* Couleur dorée */
+    font-family: "Lilita One", "Calibri", sans-serif; /* Police épaisse */
+    font-size: 20px;
+    font-weight: 700;             /* En gras */
+    margin-bottom: 8px;           /* Petit espace entre le titre et la boîte bleue */
+    margin-top: 0;
+}
+
+/* 3. La boîte bleue (Le contenu texte) */
+.body__texte-fiche {
+    display: block;               /* INDISPENSABLE : transforme le <span> en boîte */
+    background-color: #315688;    /* Le bleu de ton image */
+    color: #FFFFFF;               /* Texte blanc */
+    padding: 25px;                /* Espace à l'intérieur de la boîte */
+    border-radius: 20px;          /* Les coins arrondis */
+    font-family: "Lilita One";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.body__texte-2 {
+    color: #FFF;
+    text-align: left;
+    font-family: Calibri;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
