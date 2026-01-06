@@ -187,7 +187,7 @@ main {
     .carrousel__item { flex: 0 0 calc(25% - 18px); }
 }
 
-.titre1 {
+h1 {
 text-align: center;
 font-family: "Calisto MT";
 font-size: var(--taille-titre1);
@@ -209,12 +209,22 @@ line-height: normal;
     margin-left:120px ;
 }
 
-.titre2 {
+h2 {
     color: #FFF;
     font-family: "Lilita One";
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
+}
+
+h4 {
+    color: #B68D49;
+    text-align: left;
+    font-family: Calibri;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
     line-height: normal;
 }
 
@@ -281,16 +291,33 @@ header img, .menu img, nav img {
 }
 
 .body__image-legende {
+    width: 100%;           /* Prend toute la largeur disponible */
+    text-align: right;     /* Colle le texte à droite */
+    margin: 0 0 28px 0;    /* Marge 0 en haut (collé à l'image) et 28px en bas (espace après) */
+    
+    /* Ton style de texte */
     color: #FFF;
-    text-align: right;
     font-family: Calibri;
-    font-size: var(--taille-sous-titre1);
+    font-size: var(--taille-sous-titre1, 14px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+}
+
+.body__video-legende {
+    color: var(--Color-3, #D9D9D9);
+    font-family: Calibri;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 230px;
-    height: 34px;
-    margin-left:120px ;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    margin-right: 120px;
 }
 
 .body__link {

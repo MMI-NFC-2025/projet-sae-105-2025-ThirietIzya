@@ -2,13 +2,13 @@ img,
 picture {
     display: block; 
     height: auto; 
-    max-width: 100%; /* Les images ne dépassent jamais la largeur disponible */
+    max-width: 100%;
     width: 357px;
     border-radius: 19px;
 }
 
 figure {
-    margin: 1.125rem 0; /* Suppression des marges horizontales */
+    margin: 1.125rem 0; 
 }
 
 .valeur__img {
@@ -18,17 +18,48 @@ figure {
 }
 
 .hero__img {
-    width: 100%; /* Prend toute la largeur disponible dans le conteneur */
+    width: 100%; 
     height: auto;
     display: block;
-    /* Suppression des marges spécifiques car déjà gérées par le main */
 }
 
-/* Pour les images dans les carrousels */
 .carrousel__1-image,
 .introduction__link-icon,
 .hero__image {
     width: 100%;
+    height: auto;
+    display: block;
+}
+
+.body__image-double {
+    display: flex !important;
+    width: 100%;
+    margin: 0 0 5px 0 !important; 
+    padding: 0;
+    gap: 0;
+    border-radius: 19px;
+    overflow: hidden;
+}
+
+.body__image-double .body__image-compasants {
+    width: 50% !important;          
+    height: auto;                   
+    object-fit: cover;              
+    margin: 0 !important;           
+    border-radius: 0 !important;    
+    display: block;
+}
+
+video {
+    display: block; 
+    height: auto; 
+    max-width: 100%;
+    width: 357px;
+    border-radius: 19px;
+}
+
+.valeur__video {
+    width: 357px;
     height: auto;
     display: block;
 }
