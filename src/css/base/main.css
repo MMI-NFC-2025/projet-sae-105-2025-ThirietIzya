@@ -218,26 +218,92 @@ line-height: normal;
     line-height: normal;
 }
 
+.introduction {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1px; 
+}
+
 .sous__titre1-1 {
     color: var(--Color-3, #D9D9D9);
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 2px;
+    margin: 0;
 }
 
 .sous__titre1-2 {
     color: var(--Color-3, #D9D9D9);
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    margin-top: 0;
+    margin: 0;
 }
 
-.introduction {
-    .meta-article {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+/* On donne de l'espace sous chaque paragraphe et chaque titre */
+.body__text {
+    margin-bottom: 28px;
+    display: block;
+    color: var(--Color-3, #D9D9D9);
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
+
+/* 1. On ne touche qu'aux textes et images qui sont DANS l'article */
+/* (On suppose que votre contenu est dans une balise <article> ou <main>) */
+
+article p, article h1, article h2, .content p {
+    margin-bottom: 28px;
+    margin-left: 18px;
+    margin-right: 18px;
+    display: block;
+}
+
+article img, .content img {
+    display: block;
+    margin-bottom: 28px;
+    margin-left: 18px;
+    margin-right: 18px;
+    width: calc(100% - 36px);
+    height: auto;
+    border-radius: 19px;
+}
+
+/* 2. On s'assure que les images du menu (header) restent normales */
+header img, .menu img, nav img {
+    margin: 0 !important;
+    width: auto !important;
+    display: inline-block !important;
+}
+
+.body__image-legende {
+    color: #FFF;
+    text-align: right;
+    font-family: Calibri;
+    font-size: var(--taille-sous-titre1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 230px;
+    height: 34px;
+    margin-left:120px ;
+}
+
+.body__link {
+    color: #4179D8;
+    font-family: Calibri;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
 }
