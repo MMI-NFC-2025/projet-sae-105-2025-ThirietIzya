@@ -30,23 +30,65 @@ figure {
     display: block;
 }
 
-.body__image-double {
+/* Le conteneur (inspiré de .body__image-double) */
+.hero__image-double {
     display: flex !important;
     width: 100%;
-    margin: 0 0 5px 0 !important; 
+    margin: 20px 0 !important; /* Un peu d'espace en haut/bas */
     padding: 0;
-    gap: 0;
-    border-radius: 0 !important;
-    overflow: hidden;
+    gap: 15px; /* J'ai mis un petit écart, mets 0 si tu veux qu'elles se touchent */
+    justify-content: center;
 }
 
-.body__image-double .body__image-compasants {
-    width: 50% !important;          
-    height: auto;                   
-    object-fit: cover;              
-    margin: 0 !important;           
-    border-radius: 0 !important;    
+/* IMPORTANT : Ici on cible les liens <a> car ce sont eux 
+   qui contiennent les images. On leur donne 50% de largeur.
+*/
+/* Le conteneur flexible */
+.hero__image-double {
+    display: flex !important;
+    /* Prend toute la largeur disponible dans le <main> (donc garde les 18px du parent) */
+    width: 100%; 
+    /* IMPORTANT : Supprime l'espace entre les deux images */
+    gap: 0 !important; 
+    margin: 20px 0;
+    justify-content: center;
+}
+
+/* Les liens (conteneurs des images) */
+.hero__image-double a {
+    /* Chaque lien prend exactement la moitié de l'espace */
+    width: 50% !important; 
     display: block;
+    text-decoration: none;
+    /* On enlève toute marge interne/externe */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Les images elles-mêmes */
+.hero__image-double .hero__image {
+    width: 100% !important;
+    
+    /* C'est ICI la magie : on force un format portrait (2/3) identique pour les deux */
+    aspect-ratio: 2 / 3; 
+    
+    /* IMPORTANT : Coupe l'excédent de l'image pour qu'elle remplisse le cadre sans être écrasée */
+    object-fit: cover;   
+    
+    display: block;
+}
+
+/* --- ASTUCE DESIGN (Optionnel) --- */
+/* Pour que ça soit joli, on arrondit seulement les coins extérieurs */
+
+/* Image de gauche : on arrondit en haut à gauche et en bas à gauche */
+.lien-gauche .hero__image {
+    border-radius: 12px 0 0 12px !important;
+}
+
+/* Image de droite : on arrondit en haut à droite et en bas à droite */
+.lien-droite .hero__image {
+    border-radius: 0 12px 12px 0 !important;
 }
 
 video {
@@ -89,4 +131,41 @@ img, picture, video,
     width: calc(100% - 19px); 
     margin-right: 19px;
     margin-left: 0; 
+}
+
+/* Le conteneur qui met les images côte à côte */
+.hero__container {
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 20px; /* Espace entre les deux images */
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* On s'assure que les liens prennent la place nécessaire mais pas plus */
+.hero__container a {
+    display: block;
+    width: 45%; /* Chaque image prend environ la moitié de la place */
+    max-width: 350px; /* Limite la taille maximale si tu veux */
+}
+
+/* Ajustement des images pour qu'elles rentrent bien dans leur lien */
+.hero__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* Arrondir les angles comme sur ton exemple */
+    display: block;
+}
+
+/* --- RESPONSIVE : Sur mobile, on remet les images l'une sous l'autre --- */
+@media (max-width: 768px) {
+    .hero__container {
+        flex-direction: column; /* Passe en vertical sur mobile */
+        align-items: center;
+    }
+
+    .hero__container a {
+        width: 80%; /* Les images prennent plus de place sur mobile */
+    }
 }

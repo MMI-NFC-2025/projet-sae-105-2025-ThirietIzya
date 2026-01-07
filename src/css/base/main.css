@@ -881,3 +881,12 @@ header img, .menu img, nav img {
         margin-left: 0;           
     }
 }
+
+.body2-glossaire {
+    font-family: Calibri;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+}
