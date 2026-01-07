@@ -50,3 +50,51 @@
         });
     });
 })();
+
+/* -----------------------------------------------
+   Menu toggle: accessible hamburger behaviour
+   - toggles aria-expanded and [hidden]
+   - closes on ESC or click outside
+   - closes on window resize > breakpoint
+   ----------------------------------------------- */
+(function(){
+    const btn = document.querySelector('.header__menu-button');
+    const nav = document.querySelector('.header__menu.menu#mainNav') || document.querySelector('.header__menu.menu');
+    if (!btn || !nav) return;
+
+    const open = () => {
+        btn.setAttribute('aria-expanded','true');
+        nav.removeAttribute('hidden');
+        nav.classList.add('is-open');
+        // move focus to first link for keyboard users
+        const first = nav.querySelector('a, button');
+        if (first) first.focus();
+    };
+    const close = () => {
+        btn.setAttribute('aria-expanded','false');
+        nav.setAttribute('hidden','');
+        nav.classList.remove('is-open');
+        btn.focus();
+    };
+
+    btn.addEventListener('click', (e) => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        if (expanded) close(); else open();
+    });
+
+    // click outside to close
+    document.addEventListener('click', (e) => {
+        if (nav.hasAttribute('hidden')) return;
+        if (!nav.contains(e.target) && !btn.contains(e.target)) close();
+    });
+
+    // escape to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !nav.hasAttribute('hidden')) close();
+    });
+
+    // ensure menu closes when resizing to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900 && !nav.hasAttribute('hidden')) close();
+    });
+})();

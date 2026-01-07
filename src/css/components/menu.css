@@ -1,0 +1,108 @@
+/* Mobile retractable menu (matches the provided mockup) */
+
+/* Default: keep original (desktop) behavior */
+.header__menu.menu {
+    position: static;
+    display: block;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Small screens: transform the menu into a centered retractable panel */
+@media (max-width: 900px) {
+    .header__menu.menu {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 70px; /* just below header */
+        width: 100%;
+        max-width: 100%;
+        background: linear-gradient(180deg, rgba(6,20,31,0.98), rgba(8,28,46,0.99));
+        /* Flush to page edges */
+        border-radius: 0;
+        padding: 18px 18px 22px 18px; /* small side padding */
+        box-shadow: 0 6px 20px rgba(2,8,16,0.55); /* subtler shadow */
+        z-index: 1200;
+        opacity: 0;
+        pointer-events: none;
+        transform: none;
+        transition: opacity .22s ease, top .22s ease;
+    }
+
+    /* Heading label "MENU" */
+    .header__menu.menu::before {
+        content: "MENU";
+        display: block;
+        color: #D4A84F; /* gold */
+        font-family: "Lilita One", Calibri, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+
+    /* Thin separator under the heading */
+    .header__menu.menu::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: rgba(255,255,255,0.06);
+        margin: 12px 0 14px 0;
+    }
+
+    /* When the menu button is toggled (aria-expanded=true) show the panel */
+    .header__menu-button[aria-expanded="true"] + .header__menu.menu,
+    .header__menu.menu:not([hidden]) {
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        top: 70px; /* ensure position stable when opening */
+    }
+
+    /* Menu list and items */
+    .menu__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu__item {
+        margin: 12px 0;
+    }
+
+    .menu__link {
+        display: block;
+        color: var(--Color-9, #4179D8);
+        font-family: Calibri, sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        padding: 6px 4px;
+    }
+
+    .menu__link:hover,
+    .menu__link:focus {
+        color: #FFFFFF;
+        text-decoration: underline;
+    }
+
+    /* Language / top row align (if present inside nav) */
+    .header__menu .menu-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    /* small screens: ensure footer-like spacing at bottom */
+    .header__menu .menu__list a:last-child { margin-bottom: 8px; }
+}
+
+/* Desktop: ensure the menu links keep default look (no overlay) */
+@media (min-width: 901px) {
+    .header__menu.menu { position: static; opacity: 1; pointer-events: auto; transform: none; }
+}
