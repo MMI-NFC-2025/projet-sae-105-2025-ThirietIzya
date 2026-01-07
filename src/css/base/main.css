@@ -197,6 +197,129 @@ main {
     .carrousel__item { flex: 0 0 calc(25% - 18px); }
 }
 
+/* ----- Styles spécifiques pour la page "Femmes de sciences" et la frise ----- */
+body.page__accueil main {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 36px;
+    align-items: start;
+}
+@media (max-width: 900px) {
+    body.page__accueil main {
+        display: block;
+        padding: 0 18px;
+    }
+}
+
+.page__accueil .hero {
+    max-width: 320px;
+    margin-top: 30px;
+    display: block;
+}
+.page__accueil .hero__image {
+    /* On calcule la largeur : 100% de l'espace moins les 19px de marge */
+    width: calc(100% - 19px); 
+    /* On ajoute la marge à droite */
+    margin-right: 19px;
+    
+    /* Le reste de tes styles originaux */
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    display: block; /* Sécurité pour que les marges fonctionnent bien */
+}
+
+/* Frise / carrousel horizontal */
+.frise__matilda {
+    position: relative; /* pour positionner les flèches */
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 18px 46px; /* espace latéral pour les boutons */
+    -webkit-overflow-scrolling: touch;
+    margin: 24px 0 48px 0;
+}
+.frise__matilda::-webkit-scrollbar { display: none; }
+.frise__matilda { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Boutons spécifiques à la frise */
+.frise__matilda {
+    /* garde un contexte de bloc pour sticky */
+}
+.frise__matilda .carrousel__btn {
+    /* Utilise sticky pour rester visible pendant le scroll horizontal */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 6;
+    background: rgba(4, 21, 50, 0.85);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+.frise__matilda .carrousel__btn--prev { left: 12px; }
+.frise__matilda .carrousel__btn--next { right: 12px; }
+.frise__matilda .carrousel__btn:hover { background: rgba(182,141,73,0.95); }
+
+/* Assure la visibilité sur petits écrans */
+@media (max-width: 520px) {
+    .frise__matilda { padding: 18px 22px; }
+    .frise__matilda .carrousel__btn { width: 36px; height: 36px; }
+} 
+
+.frise__carte {
+    scroll-snap-align: start;
+    /* Cartes plus larges pour laisser voir l'image entière */
+    flex: 0 0 220px;
+    min-width: 220px;
+    background: linear-gradient(180deg, rgba(4,21,50,0.95), rgba(8,33,70,0.98));
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.6);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.frise__carte:focus, .frise__carte:hover { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(0,0,0,0.65); }
+
+.frise__image {
+    width: 100%;
+    /* Hauteur augmentée pour mieux contenir l'image entière */
+    height: 160px;
+    /* Affiche l'image entière sans recadrage */
+    object-fit: contain;
+    background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.12));
+    border-radius: 8px;
+    display: block;
+}
+
+.texte__carrousel-2 {
+    color: #D9D9D9;
+    font-family: Calibri, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0 6px;
+}
+
+/* Responsive : plus de cartes visibles sur grand écran */
+@media (min-width: 700px) {
+    .frise__carte { flex: 0 0 260px; min-width: 260px; }
+    .frise__image { height: 180px; }
+}
+@media (min-width: 1100px) {
+    .frise__carte { flex: 0 0 300px; min-width: 300px; }
+    .frise__image { height: 200px; }
+}
+
 
 .hero__legende {
     color: #FFF;
@@ -737,4 +860,24 @@ header img, .menu img, nav img {
     line-height: normal;
     margin-bottom: 28px;
     margin-top: 28px;
+}
+
+@media (max-width: 900px) {
+    
+    /* 1. On débloque la largeur du conteneur parent pour qu'il prenne toute la place */
+    .page__accueil .hero {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* 2. On applique ta demande : marge à droite de 19px */
+    .page__accueil .hero__image {
+        display: block;
+        /* L'image prend 100% de la place MOINS les 19px de marge */
+        width: calc(100%); 
+        /* On force la marge à droite */
+        margin-right: 18px;       
+        /* On la colle à gauche */
+        margin-left: 0;           
+    }
 }

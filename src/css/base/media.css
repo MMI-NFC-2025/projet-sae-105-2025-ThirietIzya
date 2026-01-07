@@ -80,3 +80,13 @@ img, picture, video,
     border-radius: 0 !important;
     overflow: visible !important;
 }
+
+/* Remplace le bloc existant ou ajoute celui-ci spécifiquement pour l'image du hero */
+
+.hero__image {
+    display: block;
+    height: auto;
+    width: calc(100% - 19px); 
+    margin-right: 19px;
+    margin-left: 0; 
+}
