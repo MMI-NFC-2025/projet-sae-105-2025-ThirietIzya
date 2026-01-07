@@ -6,6 +6,5 @@
 - NOM :Thiriet
 - PRÉNOM :Izya
 - GROUPE :C2
-- URL du site :
+- URL du site :https://trajectoirek.netlify.app
 - URL FIGMA :https://www.figma.com/design/xEAl2gbBwUGPc7sWNYmWhX/Thiriet_Izya-maquette-TrajectoireK?node-id=253-785&t=PnVyagd45YAdejpw-1
-

@@ -242,12 +242,10 @@ body.page__accueil main {
 .frise__matilda::-webkit-scrollbar { display: none; }
 .frise__matilda { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Boutons spécifiques à la frise */
 .frise__matilda {
-    /* garde un contexte de bloc pour sticky */
+   
 }
 .frise__matilda .carrousel__btn {
-    /* Utilise sticky pour rester visible pendant le scroll horizontal */
     position: -webkit-sticky;
     position: sticky;
     top: 50%;

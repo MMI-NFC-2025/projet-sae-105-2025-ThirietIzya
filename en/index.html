@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
         content="TrajectoireK, site sur l'effet Matilda et Katherine Johnson">
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <title>TrajectoireK - Matilda effect and Katherine Johnson</title>
         <link rel="stylesheet" type="text/css" href="/src/css/style.css">
         <script type="module" src="/src/js/script.js"></script>
@@ -28,7 +29,7 @@
             <nav class="header__menu menu" id="mainNav" hidden>
                 <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link" href="/">Accueil</a>
+                            <a class="menu__link" href="index.html">HOME PAGE</a>
                         </li>
                         <li class="menu__item">
                             <a class="menu__link" href="biographie.html">BIOGRAPHY OF KATHERINE JOHNSON</a>
@@ -43,7 +44,7 @@
                             <a class="menu__link" href="livre.html">"HIDDEN FIGURES" BOOK</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="film.html=">"HIDDEN FIGURES" MOVIE</a>
+                            <a class="menu__link" href="film.html">"HIDDEN FIGURES" MOVIE</a>
                         </li>
                         <li class="menu__item">
                             <a class="menu__link" href="contact.html">CONTACT US</a>
@@ -66,14 +67,14 @@
             </a>
         </header>
         <main>
-            <section class="hero">
+            <div class="hero">
                 <a class="hero__link">
                     <img class="hero__image"
                     src="/assets/img/photo_home_page_1.avif"
                     alt="Katherine Johnson travaillant" />
                 </a>
-            </section>
-            <section class="introduction">
+            </div>
+            <div class="introduction">
                 <a class="introduction__link">
                     <img class="introduction__link-icon"
                     src="/assets/icon/icon_0.svg"
@@ -81,48 +82,52 @@
                 </a>
                 <p class="introduction__text">
                     Katherine Johnson was a brilliant African American mathematician at NASA, whose precise calculations enabled the success of the early American space missions and paved the way for women in science.
-                </p>
-                <button class="introduction__button" aria-label="biography">
-                    <a class="introduction__button-link" href="biography.html">biography</a>
+                </p> 
+            </div>
+                <a href="biographie.html" class="introduction__bouton">BIOGRAPHY</a>
+            <div class="carrousel__1" aria-label="Carrousel">
+                <button class="carrousel__btn carrousel__btn--prev" aria-label="Précédent">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
-            </section>
-            <section class="carrousel__1">
-                <a class="carrousel__1-link">
-                    <img class="carrousel__1-image"
-                    src="/assets/img/photo_home_page_2.avif"
-                    alt="image effet Matilda" />
-                </a>
-                <p class="carrousel__1-text">
-                    Women in science in literature
-                </p>
-                <a class="carrousel__1-link">
-                    <img class="carrousel__1-image"
-                    src="/assets/img/photo_home_page_3.avif"
-                    alt="photo de Katherine Johnson qui travaille" />
-                </a>
-                <p class="carrousel__1-text">
-                    The work of Katherine Johnson
-                </p>
-                <a class="carrousel__1-link">
-                    <img class="carrousel__1-image"
-                    src="/assets/img/photo_home_page_4.avif"
-                    alt="image du livre hidden figures" />
-                </a>
-                <p class="carrousel__1-text">
-                    “Hidden Figures”  the book
-                </p>
-                <p class="carrousel__1-text">
-                    Purpose of the University Library
-                </p>
-                <a class="carrousel__1-link">
-                    <img class="carrousel__1-image"
-                    src="/assets/img/photo_home_page_5.avif"
-                    alt="image du film les figures de l'ombre" />
-                </a>
-                <p class="carrousel__1-text">
-                    “Hidden Figures” the movie
-                </p>
-            </section>
+                <div class="carrousel__track">
+                    <a class="carrousel__item" href="femmes_sciences.html">
+                        <div class="carrousel__item-thumbnail">
+                            <img class="carrousel__item-image" src="/assets/img/photo_home_page_2.avif" alt="image effet Matilda" />
+                        </div>
+                        <div class="carrousel__item-content">
+                            <p class="carrousel__item-title">Women in science in literature</p>
+                        </div>
+                    </a>
+                    <a class="carrousel__item" href="travaux.html">
+                        <div class="carrousel__item-thumbnail">
+                            <img class="carrousel__item-image" src="/assets/img/photo_home_page_3.avif" alt="photo de Katherine Johnson qui travaille" />
+                        </div>
+                        <div class="carrousel__item-content">
+                            <p class="carrousel__item-title">The work of Katherine Johnson</p>
+                        </div>
+                    </a>
+                    <a class="carrousel__item" href="livre.html">
+                        <div class="carrousel__item-thumbnail">
+                            <img class="carrousel__item-image" src="/assets/img/photo_home_page_4.avif" alt="image du livre hidden figures" />
+                        </div>
+                        <div class="carrousel__item-content">
+                            <p class="carrousel__item-title">“Hidden Figures” the book</p>
+                            <p class="carrousel__item-subtitle">Purpose of the University Library</p>
+                        </div>
+                    </a>
+                    <a class="carrousel__item" href="film.html">
+                        <div class="carrousel__item-thumbnail">
+                            <img class="carrousel__item-image" src="/assets/img/photo_home_page_5.avif" alt="image du film les figures de l'ombre" />
+                        </div>
+                        <div class="carrousel__item-content">
+                            <p class="carrousel__item-title">“Hidden Figures” the movie</p>
+                        </div>
+                    </a>
+                </div>
+                <button class="carrousel__btn carrousel__btn--next" aria-label="Suivant">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__inner">
