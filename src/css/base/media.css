@@ -169,3 +169,17 @@ img, picture, video,
         width: 80%; /* Les images prennent plus de place sur mobile */
     }
 }
+
+/* Vérifie que tu as bien ce bloc dans ton CSS */
+.hero__image-double .hero__image {
+    width: 100% !important;
+    
+    /* Force les deux livres à avoir la même hauteur (format portrait) */
+    aspect-ratio: 2 / 3; 
+    
+    /* Recadre l'image pour qu'elle ne soit pas écrasée */
+    object-fit: cover;   
+    
+    display: block;
+    border-radius: 0; 
+}
