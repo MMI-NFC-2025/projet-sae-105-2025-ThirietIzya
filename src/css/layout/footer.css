@@ -1,41 +1,150 @@
-/* --- 1. LE CONTENEUR GLOBAL (La ligne du bas) --- */
-.footer__bottom {
-    display: flex;
-    /* Aligne le bas du texte avec le bas du logo */
-    align-items: flex-end; 
-    /* Pousse le texte à gauche et le logo tout à droite */
-    justify-content: space-between; 
+/* =========================================
+   FOOTER STYLE - TrajectoireK
+   ========================================= */
+
+.footer {
+    /* Fond bleu nuit très sombre comme sur l'image */
+    background-color: var(--color); 
+    color: #ffffff;
+    padding: 60px 0;
+    margin-top: 50px;
     width: 100%;
 }
 
-/* --- 2. LE TEXTE (Correction majeure ici) --- */
-.footer__text-3 {
-    font-size: var(--taille-typo-footer-3);
-    font-family: var(--titre-1);
-    margin: 0;
-    line-height: 1.4; /* Un peu plus d'air pour la lisibilité */
-    
-    /* ON SUPPRIME display: flex ICI ! */
-    display: block; 
-    
-    /* On lui donne de la place pour s'étaler (comme sur l'image 2) */
-    max-width: 70%; 
+/* Conteneur centré qui s'aligne avec ton <main> */
+.footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 18px; /* Mêmes marges latérales que ton main */
 }
 
-/* --- 3. LE LOGO (Nettoyage) --- */
-.footer__logo-img {
-    height: 1.5rem;
-    width: auto;
-    border-radius: 0 !important;
-    display: block; /* Mieux que flex ici */
-    
-    /* ON SUPPRIME LE MARGIN-LEFT: 150px */
-    /* C'était ça qui écrasait ton texte ! */
-    margin-left: 0; 
+/* --- Navigation du haut (À PROPOS, ETC.) --- */
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Espace entre les liens */
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Ligne de séparation subtile optionnelle */
+    padding-bottom: 30px;
 }
 
-.footer__logo-link {
-    /* Le lien autour de l'image ne doit pas gêner */
-    display: block;
+.footer__nav a {
+    color: #FFF;
     text-decoration: none;
+    text-transform: uppercase;
+    /* Utilisation de ta police sans-serif (Calibri) en gras */
+    font-family: var(--titre-2);
+    font-weight: 700; 
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.footer__nav a:hover {
+    color: var(--Color-9, #4179D8); /* Ton bleu au survol */
+}
+
+/* --- Bloc Principal (Identité + Email) --- */
+.footer__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__left {
+    width: 100%;
+}
+
+/* Nom de l'étudiant (Serif) */
+.footer__text {
+    /* Utilisation de ta police Serif (Calisto MT) */
+    font-family: "Calisto MT", serif;
+    font-size: 20px;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+
+/* L'Email (Grand, Bleu, Serif) */
+.footer__nav-2 a {
+    /* Utilisation de ta police Serif */
+    font-family: "Calisto MT", serif;
+    /* Couleur bleue proche de l'image (légèrement plus sombre que ton var(--Color-9)) */
+    color: #3b6db5; 
+    font-size: 32px; /* Taille imposante comme sur l'image */
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    transition: color 0.3s;
+}
+
+.footer__nav-2 a:hover {
+    text-decoration: underline;
+    color: #5a8ddb;
+}
+
+/* Mentions légales */
+.footer__text-2 {
+    font-family: Calibri, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+/* --- Partie basse (Texte projet + Logo) --- */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between; /* Ecarte le texte à gauche et le logo à droite */
+    align-items: flex-end; /* Aligne le bas du logo avec le bas du texte */
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Petite ligne de séparation */
+}
+
+.footer__text-3 {
+    font-family: Calibri, sans-serif;
+    font-size: 14px;
+    color: #D9D9D9; /* Ton gris clair */
+    max-width: 500px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Logo */
+.footer__logo-img {
+    height: 25px; /* Ajuste la hauteur selon ton SVG */
+    width: auto;
+    display: block;
+    margin: 0; /* Reset des marges héritées */
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        border: none;
+    }
+
+    .footer__nav-2 a {
+        font-size: 20px; /* Plus petit sur mobile pour éviter que ça dépasse */
+        word-break: break-all; /* Coupe l'email si trop long */
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .footer__logo-link {
+        align-self: flex-start; /* Aligne le logo à gauche sur mobile */
+        margin-top: 10px;
+    }
 }
